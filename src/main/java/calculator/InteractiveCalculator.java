@@ -3,6 +3,7 @@ package calculator;
 import java.util.Scanner;
 
 import calculator.operations.AddOperation;
+import calculator.operations.MultiplyOperation;
 import calculator.operations.SubtractOperation;
 
 public class InteractiveCalculator {
@@ -40,6 +41,13 @@ public class InteractiveCalculator {
 			System.out.println(result);
 			
 		} else if (operation.contentEquals("multiply") ) {
+			
+			MultiplyOperation multiply = new MultiplyOperation();
+			multiply.setA(numberA);
+			multiply.setB(numberB);
+			result = multiply.getResult();
+			
+			System.out.println(result);
 			
 		} else if (operation.equals("divide")) {
 			
