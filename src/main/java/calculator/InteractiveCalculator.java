@@ -3,6 +3,7 @@ package calculator;
 import java.util.Scanner;
 
 import calculator.operations.AddOperation;
+import calculator.operations.SubtractOperation;
 
 public class InteractiveCalculator {
 	
@@ -27,7 +28,16 @@ public class InteractiveCalculator {
 			add.setB(numberB);
 			result = add.getResult();
 			
+			System.out.println(result);
+			
 		} else if (operation.contentEquals("subtract")) {
+			
+			SubtractOperation subtract = new SubtractOperation();
+			subtract.setA(numberA);
+			subtract.setB(numberB);
+			result = subtract.getResult();
+			
+			System.out.println(result);
 			
 		} else if (operation.contentEquals("multiply") ) {
 			
