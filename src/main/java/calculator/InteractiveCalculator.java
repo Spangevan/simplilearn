@@ -3,6 +3,7 @@ package calculator;
 import java.util.Scanner;
 
 import calculator.operations.AddOperation;
+import calculator.operations.DivideOperation;
 import calculator.operations.MultiplyOperation;
 import calculator.operations.SubtractOperation;
 
@@ -22,14 +23,14 @@ public class InteractiveCalculator {
 		scanner.nextLine();
 		String operation = scanner.nextLine();
 		
-		int result = 0;
+		double result = 0;
 		if (operation.contentEquals("add")) {
 			AddOperation add = new AddOperation();
 			add.setA(numberA);
 			add.setB(numberB);
 			result = add.getResult();
 			
-			System.out.println(result);
+			System.out.println((int)result);
 			
 		} else if (operation.contentEquals("subtract")) {
 			
@@ -38,7 +39,7 @@ public class InteractiveCalculator {
 			subtract.setB(numberB);
 			result = subtract.getResult();
 			
-			System.out.println(result);
+			System.out.println((int)result);
 			
 		} else if (operation.contentEquals("multiply") ) {
 			
@@ -47,12 +48,19 @@ public class InteractiveCalculator {
 			multiply.setB(numberB);
 			result = multiply.getResult();
 			
-			System.out.println(result);
+			System.out.println((int)result);
 			
 		} else if (operation.equals("divide")) {
 			
+			DivideOperation divide = new DivideOperation();
+			divide.setA(numberA);
+			divide.setB(numberB);
+			result = divide.getResult();
+			
+			System.out.println(result);
+			
 		} else {
-			System.out.println();
+			System.out.println("I am sorry, that input is not valid");
 		}
 		
 		

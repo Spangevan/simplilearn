@@ -13,8 +13,8 @@ final public class DivideOperation {
 		this.b = input;
 	}
 	
-	public int getResult() {
-		return this.a / this.b;
+	public double getResult() {
+		return Math.round((1.0 * this.a) / this.b * 10.0)/10.0;
 	}
 
 
